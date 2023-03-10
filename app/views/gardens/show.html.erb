@@ -1,0 +1,14 @@
+<div style='border: 2px solid red; padding: 2rem 3rem;margin-bottom:5rem ;'>
+  <%= @garden.name %>
+</div>
+
+
+<% @plants.each do |plant| %>
+  <div style='color: purple;'>
+    <%= link_to plant.name, garden_plant_path(plant) %>
+  </div>
+
+  <img src="
+    <% plant.image_url %>
+  " alt="">
+<% end %>
